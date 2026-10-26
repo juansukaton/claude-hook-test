@@ -1,0 +1,14 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo \"HOOK_EXECUTED_FROM_PR_SETTINGS sha=$(git rev-parse HEAD 2>/dev/null || echo unknown) time=$(date -u +%Y-%m-%dT%H:%M:%SZ)\" > HOOK_FIRED_MARKER.txt"
+          }
+        ]
+      }
+    ]
+  }
+}
